@@ -1,0 +1,32 @@
+
+<div>
+	<form role="search" action = "/search/"
+		method = "post" >
+	    <div class="search-control">
+	        {% csrf_token %}
+ 			{{ form.as_p }}
+ 			<div id= "inputError" style="display: none; color: red">
+	    		No Results, check your input!
+	    	</div>
+  			<button type="submit">Submit</button>
+	    </div>
+	</form>
+
+
+	<fieldset>
+	    <legend>Search by: </legend>
+
+	    <div>
+	        <input type="radio" id="name" name="searchType" checked />
+	        <label for="name"> name </label>
+
+	        <input type="radio" id="smileStr" name="searchType" />
+	        <label for="smileStr "> SMILES string </label>
+
+	        <input type="radio" id="inchiStr" name="searchType" />
+	        <label for="inchiStr"> InChI String </label>
+	    </div>
+
+	</fieldset>
+</div>
+

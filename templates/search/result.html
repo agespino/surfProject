@@ -1,0 +1,79 @@
+<div>
+	<img>
+		{{molSVG}}
+
+	<img>
+<div>
+
+<div>
+	Name:
+	{{ name }}
+</div>
+
+<div>
+	InChI String: 
+	{{ inchiStr}}
+</div>
+
+<div>
+	SMILES String: <br />
+	{{ smilesStr }}
+</div>
+
+<div>
+	Has rings: <br />
+	{{hasRings}}
+</div>
+
+<div>
+	Number of SSSR: <br />
+	{{numSSSR}}
+</div>
+
+<div>
+	Rings: <br />
+	{{ringsLst}}
+	Aromatic Rings:<br />
+	{{aromatics}}
+</div>
+
+<div>
+	betas: <br />
+	{{betas}}
+</div>
+
+<div>
+	Connectivity Matrix: 
+	<table>
+	    {% for row in cTableSimple %}
+	        <tr>
+	        {% for cell in row %}
+	            {% if forloop.first or forloop.parentloop.first %} <th> {% else %} <td> {% endif %}
+	                {{ cell }}
+	            {% if forloop.first or forloop.parentloop.first %} </th> {% else %} </td> {% endif %}
+	        {% endfor %}
+	        </tr>
+	    {% endfor %}
+	</table>
+	<button type="cMatrixView">Switch Matrix View </button>
+	<button type="cMatrixHs">Show H's </button>
+
+</div>
+
+<div>
+	Bond Order Matrix:
+	<table>
+	    {% for row in boTableSimple %}
+	        <tr>
+	        {% for cell in row %}
+	            {% if forloop.first or forloop.parentloop.first %} <th> {% else %} <td> {% endif %}
+	                {{ cell }}
+	            {% if forloop.first or forloop.parentloop.first %} </th> {% else %} </td> {% endif %}
+	        {% endfor %}
+	        </tr>
+	    {% endfor %}
+	</table>	
+	<button type="boMatrixView">Switch Matrix View </button>
+	<button type="boMatrixHs">Show H's </button>
+
+</div>

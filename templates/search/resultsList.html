@@ -1,0 +1,10 @@
+Results:
+<ul>
+{% for result in resultsLst %}
+    <li><a href = "/search/results/name/{{result.iupac_name}}" >{{ result.iupac_name}}</a></li>
+    <li>{{ result.inchi}}</li>
+    <li>{{ result.pu}}</li>
+{% empty %}
+    <li>Sorry, no results.</li>
+{% endfor %}
+</ul>

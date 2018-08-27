@@ -1,0 +1,20 @@
+
+
+
+<div>
+	Connectivity Matrix: 
+	<table>
+	    {% for row in cTableSimple %}
+	        <tr>
+	        {% for cell in row %}
+	            {% if forloop.first or forloop.parentloop.first %} <th> {% else %} <td> {% endif %}
+	                {{ cell }}
+	            {% if forloop.first or forloop.parentloop.first %} </th> {% else %} </td> {% endif %}
+	        {% endfor %}
+	        </tr>
+	    {% endfor %}
+	</table>
+	<button type="cMatrixView">Switch Matrix View </button>
+
+</div>
+
