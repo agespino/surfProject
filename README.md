@@ -41,7 +41,7 @@ Activate your conda environment first
 
 ## Running the program 
 
-### Activate the conda wnvironemnt
+### Activate the conda environemnt
 For Mac and Linux users:
 ```bash
 source activate my-rdkit-env
