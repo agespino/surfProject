@@ -59,7 +59,7 @@ Open up the terminal and navigate to the Directory you have the project folder i
 cd surfSiteProj
 ```
 ```bash
-source activate my-rdkit-env
+python manage.py runserver
 ```
 
 ### Open Program on browser
